@@ -6,7 +6,7 @@ const router = new Router({
 })
 
 router.get('/', async (ctx) => {
-    ctx.status = 501
+    ctx.response.body = await store.listTasks()
 })
 
 router.post('/', async (ctx) => {
